@@ -12,6 +12,16 @@ body {
   background: url("./img/FUNDOS-NOVO-SITE-DINBRASIL.jpg") center/cover no-repeat;
 }
 
+.box-texto{
+    width: 70%;
+  
+}
+
+.texto-1{
+font-size: 40px;
+    
+}
+
 /* CONTÊINER PRINCIPAL */
 .folha {
   position: relative;
