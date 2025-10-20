@@ -162,7 +162,7 @@ color:white;
   font-size: clamp(12px, 2.5vmin, 18px);
 }
 
-   @media (min-width: 480px) {
+   @media (min-width: 680px) {
 
        /* BOTÃO CENTRAL */
 .btnRoleta {
