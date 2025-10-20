@@ -110,9 +110,9 @@ text-align: center;
   background-color: #cec000;
   border: 10px solid #cec000;
   cursor: pointer;
-  font-size: 7vmin;
+  font-size: 4vmin;
   border-radius: 50%;
-  width: 10%;
+  width: 8%;
   aspect-ratio: 1 / 1;
   text-align: center;
   z-index: 1000;
@@ -123,6 +123,7 @@ text-align: center;
 
 /* POPUP */
 .popup {
+  
   display: none;
   position: fixed;
   inset: 0;
@@ -135,19 +136,19 @@ text-align: center;
 
 .popup-content {
   background: url("./img/fundo-din-azul.jpg") center/cover no-repeat;
-  padding: 7em;
+  padding: 2em;
   border-radius: 2vmin;
   text-align: center;
-  width: 70%;
+  width: 40%;
 }
 
 .popup-content h2 {
-  font-size: 36px;
+  font-size: 46px;
   color:white
 }
 
 .popup-content p {
-  font-size: 16px;
+  font-size: 20px;
   margin: 1em 0;
   color:white
 }
@@ -175,9 +176,9 @@ text-align: center;
   background-color: #cec000;
   border: 10px solid #cec000;
   cursor: pointer;
-  font-size: 8vmin;
+  font-size: 5vmin;
   border-radius: 50%;
-  width: 10%;
+  width: 9%;
   aspect-ratio: 1 / 1;
   text-align: center;
   z-index: 1000;
@@ -190,7 +191,7 @@ text-align: center;
 .premio {
   position: absolute;
   z-index: 999;
-  font-size: 36px;
+  font-size: 16px;
   font-weight: bold;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,.5);
@@ -215,7 +216,55 @@ body {
 .texto-1{
 font-size: 40px;
 margin-bottom: 40px;
-color:white;
+color:white;}
     
+
+
+.popup {
+  
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.7);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+}
+
+.popup-content {
+  background: url("./img/fundo-din-azul.jpg") center/cover no-repeat;
+  padding: 2em 4em;
+  border-radius: 2vmin;
+  text-align: center;
+  width: 70%;
+}
+
+.popup-content h2 {
+  font-size: 46px;
+  color:white
+}
+
+.popup-content p {
+  font-size: 20px;
+  margin: 0em 0;
+  color:white
+}
+
+.btnReiniciar {
+  margin-top: 12px;
+  padding: 2vmin 8vmin;
+  background: #d35801;
+  color: white;
+  border: none;
+  border-radius: 1vmin;
+  cursor: pointer;
+  font-size: clamp(12px, 3.5vmin, 19px);
+}
+
+
+
+
+
    }
-   }
+   
