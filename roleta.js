@@ -12,6 +12,23 @@ function angleFromTopClockwise(x, y, cx, cy) {
   return (angDegFromRightCCW + 360 + 90) % 360;
 }
 
+// 🧠 Função auxiliar para definir o artigo correto
+function gerarMensagemPremio(premio) {
+  // Normaliza texto (para comparar sem acentos ou maiúsculas)
+  const texto = premio.toLowerCase();
+
+  // Casos especiais com artigo definido
+  if (texto.includes("bala + bottom")) return "Você ganhou uma Bala e um Bottom!";
+  if (texto.includes("bala")) return "Você ganhou uma Bala!";
+  if (texto.includes("caneta")) return "Você ganhou uma Caneta!";
+  if (texto.includes("chaveiro")) return "Você ganhou um Chaveiro!";
+  if (texto.includes("adesivo")) return "Você ganhou um Adesivo!";
+  if (texto.includes("bottom")) return "Você ganhou um Bottom!";
+
+  // Caso genérico (fallback)
+  return "Você ganhou " + premio + "!";
+}
+
 function playOnClick() {
   // impede rodar se popup estiver aberto ou roleta girando
   if (isSpinning) return;
@@ -35,7 +52,7 @@ function playOnClick() {
 
   // 🔢 Probabilidades (soma = 100)
   // [Bala, Adesivo, Chaveiro, Bala+bottom, Bottom, Caneta, Bottom, Bala]
-  const probabilidades = [0, 0, 0, 0, 0, 100, 0, 0];
+  const probabilidades = [100, 0, 0, 0, 0, 0, 0, 0];
 
   // Escolhe com base em probabilidade
   const random = Math.random() * 100;
@@ -62,8 +79,9 @@ function playOnClick() {
   globalObjects.btnPlay.disabled = true;
 
   setTimeout(() => {
-    const texto = premiosElems[indiceVencedor].innerText.trim();
-    globalObjects.mensagemPremio.textContent = "Você ganhou " + texto + "!";
+    const textoPremio = premiosElems[indiceVencedor].innerText.trim();
+    const mensagem = gerarMensagemPremio(textoPremio);
+    globalObjects.mensagemPremio.textContent = mensagem;
     globalObjects.popup.style.display = "flex";
     isSpinning = false;
   }, 4100);
