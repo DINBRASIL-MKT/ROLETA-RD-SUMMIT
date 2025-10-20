@@ -1,0 +1,152 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background: url("./img/FUNDOS-NOVO-SITE-DINBRASIL.jpg") center/cover no-repeat;
+}
+
+/* CONTÊINER PRINCIPAL */
+.folha {
+  position: relative;
+  width: min(90vw, 90vh);
+  aspect-ratio: 1 / 1;
+  background-color: rgba(205, 205, 205, 0.27);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ROLETA */
+.roleta {
+  position: relative;
+  width: 90%;
+  aspect-ratio: 1 / 1;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  transform-origin: center;
+  background-color: #000; /* fundo base para eliminar transparência */
+}
+
+/* SETA */
+.seta {
+  position: absolute;
+  top: -2%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 40px solid #cec000;
+  z-index: 999;
+  animation: animacaoSeta .35s linear infinite;
+}
+
+@keyframes animacaoSeta {
+  0% { transform: translateX(-50%) rotate(0deg); }
+  25% { transform: translateX(-50%) rotate(-15deg); }
+  75% { transform: translateX(-50%) rotate(15deg); }
+  100% { transform: translateX(-50%) rotate(0deg); }
+}
+
+/* SETORES COLORIDOS — AGORA 100% OPAQUE */
+.box1 { background-color:  #435873; clip-path: polygon(50% 50%, 0% 0%, 100% 0%); position:absolute; inset:0; }
+.box2 { background-color: #d35801; clip-path: polygon(50% 50%, 100% 0%, 100% 50%); position:absolute; inset:0; }
+.box3 { background-color: #435873; clip-path: polygon(50% 50%, 100% 50%, 100% 100%); position:absolute; inset:0; }
+.box4 { background-color: #d35801; clip-path: polygon(50% 50%, 100% 100%, 50% 100%); position:absolute; inset:0; }
+.box5 { background-color: #435873; clip-path: polygon(50% 50%, 50% 100%, 0% 100%); position:absolute; inset:0; }
+.box6 { background-color: #d35801; clip-path: polygon(50% 50%, 0% 100%, 0% 50%); position:absolute; inset:0; }
+.box7 { background-color: #435873; clip-path: polygon(50% 50%, 0% 50%, 0% 0%); position:absolute; inset:0; }
+.box8 { background-color: #d35801; clip-path: polygon(50% 50%, 0% 0%, 50% 0%); position:absolute; inset:0; }
+
+/* TEXTOS */
+.premio {
+  position: absolute;
+  z-index: 999;
+  font-size: clamp(12px, 3.2vmin, 28px);
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,.5);
+  pointer-events: none;
+}
+.premio1 { top: 35%; left: 8%; transform: rotate(25deg); }
+.premio2 { top: 15%; left: 30%; transform: rotate(55deg); }
+.premio3 { top: 15%; left: 55%; transform: rotate(115deg); }
+.premio4 { top: 33%; right: 10%; transform: rotate(150deg); }
+.premio5 { top: 60%; right: 10%; transform: rotate(200deg); }
+.premio6 { top: 80%; right: 30%; transform: rotate(250deg); }
+.premio7 { top: 80%; left: 30%; transform: rotate(306deg); }
+.premio8 { top: 60%; left: 10%; transform: rotate(333deg); }
+
+/* BOTÃO CENTRAL */
+.btnRoleta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: #cec000;
+  border: 10px solid #cec000;
+  cursor: pointer;
+  font-size: 4vmin;
+  border-radius: 50%;
+  width: 10%;
+  aspect-ratio: 1 / 1;
+  text-align: center;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* POPUP */
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.7);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+}
+
+.popup-content {
+  background: url("./img/FUNDOS-NOVO-SITE-DINBRASIL.jpg") center/cover no-repeat;
+  padding: 7vmin;
+  border-radius: 2vmin;
+  text-align: center;
+  width: min(90%, 320px);
+}
+
+.popup-content h2 {
+  font-size: clamp(16px, 4vmin, 28px);
+  color:white
+}
+
+.popup-content p {
+  font-size: clamp(14px, 3vmin, 20px);
+  margin: 1em 0;
+  color:white
+}
+
+.btnReiniciar {
+  margin-top: 12px;
+  padding: 1vmin 3vmin;
+  background: #d35801;
+  color: white;
+  border: none;
+  border-radius: 1vmin;
+  cursor: pointer;
+  font-size: clamp(12px, 2.5vmin, 18px);
+}

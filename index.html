@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>Roleta RD SUMMIT</title>
+  <link rel="stylesheet" href="./roleta.css">
+ 
+</head>
+<body>
+  <div class="folha">
+    <div class="seta"></div>
+
+    <div class="roleta" id="roleta">
+      <div class="box1"></div><div class="box2"></div><div class="box3"></div><div class="box4"></div>
+      <div class="box5"></div><div class="box6"></div><div class="box7"></div><div class="box8"></div>
+
+      <div class="premio premio1" id="opt1">Bala</div>
+      <div class="premio premio2" id="opt0">Adesivo</div>
+      <div class="premio premio3" id="opt7">Chaveiro</div>
+      <div class="premio premio4" id="opt6">Bala + bottom</div>
+      <div class="premio premio5" id="opt5">Bottom</div>
+      <div class="premio premio6" id="opt4">Caneta</div>
+      <div class="premio premio7" id="opt3">Bottom</div>
+      <div class="premio premio8" id="opt2">Bala</div>
+
+      <div id="btnPlay" class="btnRoleta" onclick="playOnClick()">►</div>
+    </div>
+  </div>
+
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>Parabéns!</h2>
+      <p id="mensagemPremio">Você ganhou ...</p>
+      <button class="btnReiniciar" onclick="fecharPopup()">Fechar</button>
+    </div>
+  </div>
+
+
+  <script src="./roleta.js"></script>
+</body>
+</html>
