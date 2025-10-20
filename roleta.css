@@ -150,3 +150,27 @@ body {
   cursor: pointer;
   font-size: clamp(12px, 2.5vmin, 18px);
 }
+
+   @media (max-width: 480px) {
+
+       /* BOTÃO CENTRAL */
+.btnRoleta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: #cec000;
+  border: 10px solid #cec000;
+  cursor: pointer;
+  font-size: 8vmin;
+  border-radius: 50%;
+  width: 10%;
+  aspect-ratio: 1 / 1;
+  text-align: center;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+   }
