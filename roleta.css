@@ -28,6 +28,7 @@ body {
   font-size: clamp(24px, 5vw, 50px);
   color: white;
   line-height: 1.2;
+  text-align: left;
 }
 
 /* CONTÊINER PRINCIPAL */
