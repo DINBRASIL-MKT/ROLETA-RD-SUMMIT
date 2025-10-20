@@ -1,27 +1,33 @@
-*{
-    font-family: 'Poppins', sans-serif;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* BODY */
 body {
-  margin: 0;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: url("./img/FUNDOS-NOVO-SITE-DINBRASIL.jpg") center/cover no-repeat;
 }
 
-.box-texto{
-    width: 30%;
-  
+/* TEXTO INICIAL */
+.box-texto {
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.texto-1{
-font-size: 50px;
-margin-bottom: 40px;
-color:white;
-text-align: center;
-    
+.texto-1 {
+  font-size: clamp(24px, 5vw, 50px);
+  color: white;
+  line-height: 1.2;
 }
 
 /* CONTÊINER PRINCIPAL */
@@ -46,7 +52,7 @@ text-align: center;
   border-radius: 50%;
   overflow: hidden;
   transform-origin: center;
-  background-color: #000; /* fundo base para eliminar transparência */
+  background-color: #000; 
 }
 
 /* SETA */
@@ -61,7 +67,7 @@ text-align: center;
   border-right: 20px solid transparent;
   border-top: 40px solid #cec000;
   z-index: 999;
-  animation: animacaoSeta .35s linear infinite;
+  animation: animacaoSeta 0.35s linear infinite;
 }
 
 @keyframes animacaoSeta {
@@ -71,8 +77,8 @@ text-align: center;
   100% { transform: translateX(-50%) rotate(0deg); }
 }
 
-/* SETORES COLORIDOS — AGORA 100% OPAQUE */
-.box1 { background-color:  #435873; clip-path: polygon(50% 50%, 0% 0%, 100% 0%); position:absolute; inset:0; }
+/* SETORES COLORIDOS */
+.box1 { background-color: #435873; clip-path: polygon(50% 50%, 0% 0%, 100% 0%); position:absolute; inset:0; }
 .box2 { background-color: #d35801; clip-path: polygon(50% 50%, 100% 0%, 100% 50%); position:absolute; inset:0; }
 .box3 { background-color: #435873; clip-path: polygon(50% 50%, 100% 50%, 100% 100%); position:absolute; inset:0; }
 .box4 { background-color: #d35801; clip-path: polygon(50% 50%, 100% 100%, 50% 100%); position:absolute; inset:0; }
@@ -81,20 +87,21 @@ text-align: center;
 .box7 { background-color: #435873; clip-path: polygon(50% 50%, 0% 50%, 0% 0%); position:absolute; inset:0; }
 .box8 { background-color: #d35801; clip-path: polygon(50% 50%, 0% 0%, 50% 0%); position:absolute; inset:0; }
 
-/* TEXTOS */
+/* TEXTOS DOS PRÊMIOS */
 .premio {
   position: absolute;
   z-index: 999;
-  font-size: 36px;
+  font-size: clamp(14px, 3vw, 36px);
   font-weight: bold;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,.5);
   pointer-events: none;
 }
+
 .premio1 { top: 35%; left: 8%; transform: rotate(25deg); }
 .premio2 { top: 15%; left: 30%; transform: rotate(55deg); }
 .premio3 { top: 15%; left: 55%; transform: rotate(115deg); }
-.premio4 { top: 33%; right: 10%; transform: rotate(150deg); margin-top: 15px !important; margin-right: -30px !important; }
+.premio4 { top: 33%; right: 10%; transform: rotate(150deg); margin-top: 15px; margin-right: -30px; }
 .premio5 { top: 60%; right: 10%; transform: rotate(200deg); }
 .premio6 { top: 80%; right: 30%; transform: rotate(250deg); }
 .premio7 { top: 80%; left: 30%; transform: rotate(306deg); }
@@ -110,15 +117,14 @@ text-align: center;
   background-color: #cec000;
   border: 10px solid #cec000;
   cursor: pointer;
-  font-size: 7vmin;
+  font-size: clamp(18px, 7vmin, 50px);
   border-radius: 50%;
   width: 10%;
   aspect-ratio: 1 / 1;
-  text-align: center;
-  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 /* POPUP */
@@ -128,6 +134,7 @@ text-align: center;
   inset: 0;
   background: rgba(0,0,0,.7);
   z-index: 2000;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 5%;
@@ -135,21 +142,22 @@ text-align: center;
 
 .popup-content {
   background: url("./img/fundo-din-azul.jpg") center/cover no-repeat;
-  padding: 7em;
+  padding: 4em;
   border-radius: 2vmin;
   text-align: center;
-  width: 70%;
+  width: 90%;
+  max-width: 500px;
 }
 
 .popup-content h2 {
-  font-size: 36px;
-  color:white
+  font-size: clamp(20px, 6vw, 36px);
+  color:white;
 }
 
 .popup-content p {
-  font-size: 16px;
+  font-size: clamp(14px, 3vw, 16px);
   margin: 1em 0;
-  color:white
+  color:white;
 }
 
 .btnReiniciar {
@@ -163,58 +171,28 @@ text-align: center;
   font-size: clamp(12px, 2.5vmin, 18px);
 }
 
-   @media (max-width: 680px) {
+/* RESPONSIVO MOBILE */
+@media (max-width: 680px) {
+  .box-texto {
+    width: 95%;
+  }
 
-       /* BOTÃO CENTRAL */
-.btnRoleta {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  background-color: #cec000;
-  border: 10px solid #cec000;
-  cursor: pointer;
-  font-size: 8vmin;
-  border-radius: 50%;
-  width: 10%;
-  aspect-ratio: 1 / 1;
-  text-align: center;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .texto-1 {
+    font-size: clamp(20px, 6vw, 40px);
+    margin-bottom: 2rem;
+  }
+
+  .btnRoleta {
+    font-size: clamp(16px, 8vw, 40px);
+    width: 15%;
+  }
+
+  .premio {
+    font-size: clamp(12px, 4vw, 24px);
+  }
+
+  .folha {
+    width: 95vw;
+    aspect-ratio: 1 / 1;
+  }
 }
-
-       /* TEXTOS */
-.premio {
-  position: absolute;
-  z-index: 999;
-  font-size: 36px;
-  font-weight: bold;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,.5);
-  pointer-events: none;
-}
-
-body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: url("./img/FUNDOS-NOVO-SITE-DINBRASIL.jpg") center/cover no-repeat;
-}
-
-   .box-texto{
-    width: 100%;
-  
-}
-
-.texto-1{
-font-size: 40px;
-margin-bottom: 40px;
-color:white;
-    
-   }
