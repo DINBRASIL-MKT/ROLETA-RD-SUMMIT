@@ -85,7 +85,7 @@ text-align: center;
 .premio {
   position: absolute;
   z-index: 999;
-  font-size: 36px;
+  font-size: 20px;
   font-weight: bold;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,.5);
@@ -131,7 +131,8 @@ text-align: center;
   z-index: 2000;
   align-items: center;
   justify-content: center;
-  padding: 5%;
+  padding: 1%;
+  
 }
 
 .popup-content {
@@ -139,29 +140,29 @@ text-align: center;
   padding: 2em;
   border-radius: 2vmin;
   text-align: center;
-  width: 40%;
+  width: 70%;
 }
 
 .popup-content h2 {
-  font-size: 80px;
+  font-size: 40px;
   color:white
 }
 
 .popup-content p {
-  font-size: 40px;
+  font-size: 30px;
   margin: 1em 0em;
   color:white
 }
 
 .btnReiniciar {
   margin-top: 12px;
-  padding: 1vmin 3vmin;
+  padding: 2vmin 8vmin;
   background: #d35801;
   color: white;
   border: none;
   border-radius: 1vmin;
   cursor: pointer;
-  font-size: clamp(12px, 2.5vmin, 18px);
+  font-size: clamp(12px, 3.5vmin, 19px);
 }
 
     @media (min-width: 680px) {
