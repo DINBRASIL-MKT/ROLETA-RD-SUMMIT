@@ -73,7 +73,7 @@ body {
 .premio {
   position: absolute;
   z-index: 999;
-  font-size: clamp(12px, 3.2vmin, 28px);
+  font-size: 18px;
   font-weight: bold;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,.5);
