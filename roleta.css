@@ -12,12 +12,12 @@ body {
 }
 
 .box-texto{
-    width: 40%;
+    width: 30%;
   
 }
 
 .texto-1{
-font-size: 60px;
+font-size: 50px;
 margin-bottom: 40px;
 color:white;
     
@@ -205,4 +205,15 @@ body {
   flex-direction: column;
   background: url("./img/FUNDOS-NOVO-SITE-DINBRASIL.jpg") center/cover no-repeat;
 }
+
+   .box-texto{
+    width: 100%;
+  
+}
+
+.texto-1{
+font-size: 40px;
+margin-bottom: 40px;
+color:white;
+    
    }
