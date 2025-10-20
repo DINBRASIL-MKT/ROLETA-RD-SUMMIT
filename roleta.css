@@ -123,19 +123,19 @@ body {
 
 .popup-content {
   background: url("./img/FUNDOS-NOVO-SITE-DINBRASIL.jpg") center/cover no-repeat;
-  padding: 7vmin;
+  padding: 7em;
   border-radius: 2vmin;
   text-align: center;
-  width: min(90%, 320px);
+  width: 70%;
 }
 
 .popup-content h2 {
-  font-size: clamp(16px, 4vmin, 28px);
+  font-size: 36px;
   color:white
 }
 
 .popup-content p {
-  font-size: clamp(14px, 3vmin, 20px);
+  font-size: 16px;
   margin: 1em 0;
   color:white
 }
