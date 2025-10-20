@@ -196,4 +196,14 @@ color:white;
   text-shadow: 1px 1px 3px rgba(0,0,0,.5);
   pointer-events: none;
 }
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url("./img/FUNDOS-NOVO-SITE-DINBRASIL.jpg") center/cover no-repeat;
+}
    }
