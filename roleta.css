@@ -94,7 +94,7 @@ text-align: center;
 .premio1 { top: 35%; left: 8%; transform: rotate(25deg); }
 .premio2 { top: 15%; left: 30%; transform: rotate(55deg); }
 .premio3 { top: 15%; left: 55%; transform: rotate(115deg); }
-.premio4 { top: 33%; right: 10%; transform: rotate(150deg); }
+.premio4 { top: 33%; right: 10%; transform: rotate(150deg); margin-top: 15px !important; margin-right: -30px !important; }
 .premio5 { top: 60%; right: 10%; transform: rotate(200deg); }
 .premio6 { top: 80%; right: 30%; transform: rotate(250deg); }
 .premio7 { top: 80%; left: 30%; transform: rotate(306deg); }
