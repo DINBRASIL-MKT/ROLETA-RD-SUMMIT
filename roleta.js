@@ -12,14 +12,13 @@ function angleFromTopClockwise(x, y, cx, cy) {
   return (angDegFromRightCCW + 360 + 90) % 360;
 }
 
-// 🧠 Função auxiliar para definir o artigo correto
+//  Função auxiliar para definir o artigo correto
 function gerarMensagemPremio(premio) {
   // Normaliza texto (para comparar sem acentos ou maiúsculas)
   const texto = premio.toLowerCase();
 
   // Casos especiais com artigo definido
-  if (texto.includes("bala + bottom")) return "Você ganhou uma Bala e um Bottom!";
-  if (texto.includes("bala")) return "Você ganhou uma Bala!";
+
   if (texto.includes("caneta")) return "Você ganhou uma Caneta!";
   if (texto.includes("chaveiro")) return "Você ganhou um Chaveiro!";
   if (texto.includes("adesivo")) return "Você ganhou um Adesivo!";
@@ -50,9 +49,9 @@ function playOnClick() {
     return angleFromTopClockwise(c.x, c.y, center.x, center.y);
   });
 
-  // 🔢 Probabilidades (soma = 100)
-  // [Bala, Adesivo, Chaveiro, Bala+bottom, Bottom, Caneta, Bottom, Bala]
-  const probabilidades = [100, 0, 0, 0, 0, 0, 0, 0];
+  // Probabilidades deve somar 100 (soma = 100)
+  // [Chaveiro, Adesivo, Bottom, Caneta, Chaveiro, Adesivo, Bottom, Caneta]
+  const probabilidades = [7.5, 15, 25, 2.5, 7.5, 15, 25, 2.5];
 
   // Escolhe com base em probabilidade
   const random = Math.random() * 100;
@@ -67,7 +66,7 @@ function playOnClick() {
     }
   }
 
-  // 🔁 Faz girar até o prêmio vencedor
+  // Faz girar até o prêmio vencedor
   const angAtual = angulos[indiceVencedor];
   const deltaToTop = (360 - angAtual) % 360;
   const voltas = 6;
