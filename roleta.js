@@ -69,7 +69,7 @@ function playOnClick() {
   // Faz girar até o prêmio vencedor
   const angAtual = angulos[indiceVencedor];
   const deltaToTop = (360 - angAtual) % 360;
-  const voltas = 6;
+  const voltas = 18;
   const rotacaoFinal = voltas * 360 + deltaToTop;
 
   isSpinning = true;
