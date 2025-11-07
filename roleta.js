@@ -50,8 +50,8 @@ function playOnClick() {
   });
 
   // Probabilidades deve somar 100 (soma = 100)
-  // [Chaveiro, Adesivo, Bottom, Caneta, Chaveiro, Adesivo, Bottom, Caneta]
-  const probabilidades = [7.5, 25, 10, 7.5, 7.5, 25, 10, 7.5];
+// [Chaveiro, Adesivo, Bottom, Caneta, Chaveiro, Adesivo, Bottom, Caneta]
+const probabilidades = [5, 25, 12.5, 7.5, 5, 25, 12.5, 7.5];
 
   // Escolhe com base em probabilidade
   const random = Math.random() * 100;
